@@ -1,0 +1,13 @@
+.banner {
+  background-color: white;
+  margin: 20px auto;
+  height: 400px;
+
+  h1 {
+    margin: 0;
+    color: $pink;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 100px;
+    font-weight: bold;
+  }
+}
