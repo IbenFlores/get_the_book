@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :new, :create]
-  before_action :find_book, only: :show
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :find_book, only: [:show, :edit]
   
   def index
     @books = Book.all
@@ -22,6 +22,9 @@ class BooksController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
   end
 
   private
