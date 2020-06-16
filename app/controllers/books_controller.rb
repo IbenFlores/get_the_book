@@ -1,13 +1,12 @@
 class BooksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :find_book, only: [:show, :edit]
-  
+  before_action :find_book, only: [:show, :edit, :update, :destroy]
+
   def index
     @books = Book.all
   end
 
   def show
-    @book = Book.find(params[:id])
   end
 
   def new
@@ -25,6 +24,12 @@ class BooksController < ApplicationController
   end
 
   def edit
+  end
+
+  def destroy
+    @book.destroy
+
+    redirect_to books_path
   end
 
   private
