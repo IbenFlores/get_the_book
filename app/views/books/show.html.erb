@@ -1,11 +1,9 @@
 <div class="container">
 
   <h1><%= @book.title %></h1>
-  <%= link_to "Book Index", books_path %>
-
+  <h6><%= link_to "Edit", edit_book_path %></h6>
   <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <h3>Book</h3>
+    <div class="col-sm-12 col-md-6 d-flex">
       <table class="table table-bordered">
         <tbody>
           <thead>
@@ -15,8 +13,24 @@
             <th>Condition</th>
             <th>Price</th>
           </thead>
+          <td>
+            <%= @book.title %>
+          </td>
+          <td>
+            <%= @book.description %>
+          </td>
+          <td>
+            <%= @book.year %>
+          </td>
+          <td>
+            <%= @book.condition %>
+          </td>
+          <td>
+            <%= @book.price %>
+          </td>
         </tbody>
       </table>
     </div>
   </div>
+  <%= link_to "See all books", books_path %>
 </div>
