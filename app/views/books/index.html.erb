@@ -6,8 +6,15 @@
         <div class="card-product">
           <div class="card-product-infos">
             <h2><%= book.title %></h2>
-            <p><%= book.description %></p>
+            <p>Year of publishing: <%= book.year %></p>
+            <p>Author: <%= book.author %></p>
+            <p>Condition: <%= book.condition %></p>
+            <p>Sinopsis: <%= book.description %></p>
+            <p><%= book.price %>$</p>
           </div>
+          <p class="options"><% %></p>
+          <p class="options"></p>
+          <p class="options"></p>
         </div>
       </li>
     <% end %>
