@@ -1,1 +1,17 @@
-<h1>index</h1>
+<h1>Books</h1>
+<div class="container">
+  <ul style="list-style-type: none">
+    <% @books.each do |book| %>
+      <li>
+        <div class="card-product">
+          <div class="card-product-infos">
+            <h2><%= book.title %></h2>
+            <p><%= book.description %></p>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
