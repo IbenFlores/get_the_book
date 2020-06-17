@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   has_many :bookings
   has_many :books, through: :bookings
+
   def owned_books
     Book.where(owner_id: id)
   end

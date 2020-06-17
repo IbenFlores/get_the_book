@@ -1,9 +1,15 @@
 <div class="container">
   <h1><%= @book.title %></h1>
-  <h6><%= link_to "Edit", edit_book_path %></h6>
   <h6>
-    <%= link_to book_path(@book), method: :delete, data: { confirm: "Are you sure?" } do %>
+    <% if policy(@book).edit? %>
+      <%= link_to "Update", edit_book_path(@book) %>
+    <% end %>
+  </h6>
+  <h6>
+    <% if policy(@book).destroy? %>
+      <%= link_to book_path(@book), method: :delete, data: { confirm: "Are you sure?" } do %>
           <i class="fa fa-trash destroy_book"></i>
+      <% end %>
     <% end %>
   </h6>
   <div class="row">

@@ -12,8 +12,6 @@
 @import "components/index";
 @import "pages/index";
 
-@import "components/card_product";
-
 .background-color {
   background-color: #f7f5dd;
 }
@@ -23,8 +21,8 @@ h1 {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 10px;
-
-a {
+  a {
   text-decoration: none;
   }
 }
+
