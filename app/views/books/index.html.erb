@@ -13,8 +13,12 @@
             <p>Condition: <%= book.condition %></p>
             <p>Synopsis: <%= book.description %></p>
             <p>Price: <%= book.price %>$</p>
+            <p>Owner: <%= book.owner.username %></p>
             <i class="fas fa-book-open text-right"></i>
           </div>
+          <% if current_user != book.owner %>
+            <p><%= link_to "rent book", new_book_booking_path(book.id) %></p>
+          <% end %>
         </div>
       </li>
     <% end %>
