@@ -41,15 +41,30 @@
         </tbody>
       </table>
     </div>
-    </div>
   </div>
+</div>
+  
   <div id="button_from_show">
     <button class="btn-flat btn-flat:hover">
     <%= link_to "See all books", books_path %>
     </button>
   </div>
 
-
+<div class="badge badge-success text-wrap" style="width: 4rem;">
+   <h6 class="text-center">
+    <% if policy(@book).edit? %>
+      <%= link_to "Update", edit_book_path(@book) %>
+    <% end %>
+  </h6>
+</div>
+<h6>
+  <% if policy(@book).destroy? %>
+    <%= link_to book_path(@book), method: :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="fa fa-trash destroy_book"></i>
+    <% end %>
+  <% end %>
+</h6>
+  <%= link_to "See all books", books_path %>
 
 
 
