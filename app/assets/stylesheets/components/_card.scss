@@ -47,3 +47,13 @@
 a {
   color: $light-green;
 }
+
+.parent {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  right: 18px;
+  top: 152px;
+}
