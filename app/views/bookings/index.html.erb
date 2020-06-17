@@ -1,7 +1,7 @@
 <div class="container">
-  <ul>
+  <ul style="list-style-type: none">
     <% @bookings.each do |booking| %>
-      <li> <%= booking.book.id %> </li>
+      <li> book lended: <%= booking.book.title %> </li>
       <li> <%= booking.book.owner.username %> </li>
       <li> <%= current_user.username %> </li>
     <% end %>
