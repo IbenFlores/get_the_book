@@ -1,9 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
 
-h1 {
-  margin: 10px;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  padding: 10px;
+#index-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 80px;
+  color: $pink;
 }
