@@ -8,11 +8,11 @@
         <div class="card-product">
           <div class="card-product-infos">
             <h2><%= link_to book.title, book_path(book) %></h2>
-            <p>Year of publishing: <%= book.year %></p>
+            <p>Publishing year: <%= book.year %></p>
             <p>Author: <%= book.author %></p>
             <p>Condition: <%= book.condition %></p>
-            <p>Sinopsis: <%= book.description %></p>
-            <p><%= book.price %>$</p>
+            <p>Synopsis: <%= book.description %></p>
+            <p>Price: <%= book.price %>$</p>
             <i class="fas fa-book-open text-right"></i>
           </div>
         </div>
