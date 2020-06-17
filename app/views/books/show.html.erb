@@ -1,5 +1,5 @@
 <div class="container">
-  <h1><%= @book.title %></h1>
+  <h1 id="title-table"><%= @book.title %></h1>
   <h6>
     <% if policy(@book).edit? %>
       <%= link_to "Update", edit_book_path(@book) %>
@@ -12,7 +12,7 @@
       <% end %>
     <% end %>
   </h6>
-  <div class="row">
+  <div class="row" id="table-contents">
     <div class="col-sm-12 col-md-6 d-flex">
       <table class="table table-bordered">
         <tbody>
@@ -43,8 +43,13 @@
     </div>
     </div>
   </div>
-</div>
-<%= link_to "See all books", books_path %>
+  <div id="button_from_show">
+    <button class="btn-flat btn-flat:hover">
+    <%= link_to "See all books", books_path %>
+    </button>
+  </div>
+
+
 
 
 
