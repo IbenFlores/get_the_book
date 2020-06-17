@@ -1,11 +1,20 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 220px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  padding: 10px;
+  width: 400px;
+}
+
+.card-product h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
 }
 
 .card-product img {
@@ -39,4 +48,8 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+a {
+  color: $light-green;
 }
