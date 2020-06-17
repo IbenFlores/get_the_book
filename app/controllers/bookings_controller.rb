@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = policy_scope(current_user.bookings).order(created_at: :desc)
+  end
+
   def new
     @booking = Booking.new
     @book = Book.find(params[:book_id])

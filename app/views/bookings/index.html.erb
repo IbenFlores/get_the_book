@@ -1,0 +1,9 @@
+<div class="container">
+  <ul>
+    <% @bookings.each do |booking| %>
+      <li> <%= booking.book.id %> </li>
+      <li> <%= booking.book.owner.username %> </li>
+      <li> <%= current_user.username %> </li>
+    <% end %>
+  </ul>
+</div>
