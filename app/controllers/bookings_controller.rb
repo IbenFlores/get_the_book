@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.where(:user_id == current_user.id)
+    @bookings = policy_scope(current_user.bookings).order(created_at: :desc)
   end
 
   def new
