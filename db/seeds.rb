@@ -23,7 +23,6 @@ puts "Creating books.."
       puts "book #{x} Incomplete!"
     end
   end
-
 end
 
 puts 'Completed!'
