@@ -1,9 +1,18 @@
-<div class="container">
-  <ul style="list-style-type: none">
-    <% @bookings.each do |booking| %>
-      <li> book lended: <%= booking.book.title %> </li>
-      <li> <%= booking.book.owner.username %> </li>
-      <li> <%= current_user.username %> </li>
-    <% end %>
-  </ul>
+<div class="mb-5">
+  <h1 id="index-title" class="text-center">BOOKINGS</h1>
+</div>
+<div class="container-lg">
+    <ul style="list-style-type: none">
+      <% @bookings.each do |booking| %>
+      <div class="card-body bg-white mb-5">
+        <li class="card-title"><strong>Book: <%= booking.book.title %></strong></li>
+        <li class="card-subtitle">Lent by: <%= booking.book.owner.username %> </li>
+        <li class="card-text">Rented by: <%= current_user.username.capitalize %> </li>
+        <br>
+        <li class="card-title"><strong>Start date: <%= booking.start_date %></strong></li>
+        <li class="card-title"><strong>End date: <%= booking.end_date %></strong></li>
+        </div>
+      <% end %>
+    </ul>
+  </div>
 </div>

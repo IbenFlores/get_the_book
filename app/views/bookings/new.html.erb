@@ -1,5 +1,8 @@
-<%= simple_form_for([@book, @booking]) do |f| %>
+<div class="container">
+  <%= simple_form_for([@book, @booking]) do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.button :submit, "Ready", class: "btn-flat" %>
 <% end %>
+</div>
+
