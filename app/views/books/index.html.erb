@@ -1,4 +1,6 @@
-<h1>Books</h1>
+<div class="mb-5">
+  <h1 id="index-title" class="text-center">BOOKS</h1>
+</div>
 <div class="container">
   <ul style="list-style-type: none">
     <% @books.each do |book| %>
@@ -11,9 +13,8 @@
             <p>Condition: <%= book.condition %></p>
             <p>Synopsis: <%= book.description %></p>
             <p>Price: <%= book.price %>$</p>
+            <i class="fas fa-book-open text-right"></i>
           </div>
-          <p class="options"><%= link_to ""%></p>
-          <p class="options"></p>
         </div>
       </li>
     <% end %>

@@ -1,29 +1,54 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="banner col-12 col-lg-12">
-      <h1>GET THE BOOK</h1>
-      <p><%= link_to 'About us', about_path %></p>
-      <p>Books for rental</p>
-      <button class="btn-flat btn-flat:hover"><%= link_to "Search for books!", books_path %></button>
+    <div class="col-12 col-lg-1">
+      <br>
+      <i class="fas fa-book" style="font-size: 100px; color: black;"></i>
+    </div>
+    <div class="banner col-12 col-lg-6">
+      <h1 class="text-left">GET</h1>
+      <h1 class="text-left">THE</h1>
+      <h1 class="text-left">BOOK</h1>
+    </div>
+    <div class="col-12 col-lg-1">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <i class="fas fa-book-open" style="font-size: 100px; color: black; align-self: end;"></i>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <h1><strong>Rent</strong> or <strong>Lend</strong></h1>
-  <p>Living on a budget? Save some money and help other students get their books</p>
-  <div class="row justify-content-center">
-    <div class="text-justify info-card col-6 col-lg-3">
-      <h1>Book title</h1>
-      <p>Living on a budget? Save some money and help other students get their books</p>
+  <div class="pl-5">
+    <h1 class="font-weight-bold">Rent or Lend</h1>
+    <p>Save some money and help other students get their books</p>
+  </div>
+  <div class="row">
+    <div class="text-justify card-square col-6 col-lg-3">
+      <h1 class="text-center">About us</h1>
+      <p>How many books have you used only once and thrown away? We can relate to your situation</p>
+      <button class="btn-flat btn-flat:hover"><%= link_to 'About us', about_path %></button>
     </div>
-    <div class="text-justify info-card col-6 col-lg-3">
-      <h1>Rent or Lend</h1>
-      <p>Living on a budget? Save some money and help other students get their books</p>
+    <div class="text-justify card-square col-6 col-lg-3">
+      <h1 class="text-center">Rent</h1>
+      <p> Save some money and start renting those pricy books you where looking for</p>
+      <button class="btn-flat btn-flat:hover"><%= link_to "Search for books!", books_path %></button>
     </div>
-    <div class="text-justify info-card col-6 col-lg-3">
-      <h1>Rent or Lend</h1>
-      <p>Living on a budget? Save some money and help other students get their books</p>
+    <div class="text-justify card-square col-6 col-lg-3">
+      <h1 class="text-center">Lend</h1>
+      <p>Give your books a second life and help others rent your books - while winning a couple of pennies</p>
+      <button class="btn-flat btn-flat:hover"><%= link_to "Join and lend!", books_path %></button>
     </div>
   </div>
 </div>

@@ -1,3 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "about";
+
+#index-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 80px;
+  color: $pink;
+}
+
