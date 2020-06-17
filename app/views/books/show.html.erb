@@ -22,6 +22,8 @@
             <th>Year</th>
             <th>Condition</th>
             <th>Price</th>
+            <th>Author</th>
+            <th>Owner</th>
           </thead>
           <td>
             <%= @book.title %>
@@ -38,18 +40,27 @@
           <td>
             <%= @book.price %>
           </td>
+          <td>
+            <%= @book.author %>
+          </td>
+          <td>
+            <%= @book.owner.username %>
+          </td>
         </tbody>
       </table>
     </div>
   </div>
 </div>
-  
+
   <div id="button_from_show">
     <button class="btn-flat btn-flat:hover">
     <%= link_to "See all books", books_path %>
     </button>
+    <button class="btn-flat btn-flat:hover">
+    <%= link_to "Rent book", new_book_booking_path(@book.id) %>
+    </button>
   </div>
-
+  <br>
 <div class="badge badge-success text-wrap" style="width: 4rem;">
    <h6 class="text-center">
     <% if policy(@book).edit? %>
@@ -64,7 +75,6 @@
     <% end %>
   <% end %>
 </h6>
-  <%= link_to "See all books", books_path %>
 
 
 
