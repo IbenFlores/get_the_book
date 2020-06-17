@@ -2,12 +2,15 @@
   <h1 id="index-title" class="text-center">BOOKS</h1>
 </div>
 <div class="container">
+  <button class="btn btn-success m-5"><%= link_to "Lend a new book", new_book_path%></button>
   <div class="d-flex">
     <div class="col-12 col-lg-12">
       <% @books.each do |book| %>
-        <div class="parent card-product">
+        <div class="parent card-product col-4">
           <% if current_user != book.owner %>
-            <p class="child text-center badge badge-info text-wrap" style="width: 4rem;"><%= link_to "RENT BOOK", new_book_booking_path(book.id) %></p>
+            <p class="child text-center badge badge-info text-wrap" style="width: 4rem;">Book available for rental</p>
+          <% else %>
+            <p>This book belongs to you</p>
           <% end %>
           <div class="card-product-infos">
             <h2><%= link_to book.title, book_path(book) %></h2>
@@ -20,6 +23,4 @@
       <% end %>
     </div>
   </div>
-
-  <%= link_to "Lend a new book", new_book_path%>
 </div>
