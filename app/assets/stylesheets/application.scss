@@ -16,6 +16,15 @@
   background-color: #f7f5dd;
 }
 
+.href{
+  color: white;
+}
+
+.href:hover {
+  background: $magic-mint;
+  border-radius: 3px;
+  color: $dim-gray;
+}
 // h1 {
 //   margin: 10px;
 //   border-top: 1px solid;
@@ -29,16 +38,22 @@
 .banner {
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   padding: 150px 0;
   border-radius: 5px;
+}
+
+.banner:hover{
+  opacity: .7;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
+  text-align: center;
 }
 
 .banner p {
@@ -46,5 +61,30 @@
   color: white;
   opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}
+
+.card-category:hover{
+  opacity: .8;
+}
