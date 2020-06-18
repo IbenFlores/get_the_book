@@ -4,19 +4,19 @@
   <div class="row justify-content-center">
     <div class="col-lg-6 col-md-6 col-md-offset-3">
       <%= simple_form_for (@book) do |f| %>
-        <%= f.input :title %>
+        <%= f.input :title, :input_html => { :class => 'filler' } %>
 
-        <%= f.input :author %>
+        <%= f.input :author, :input_html => { :class => 'filler' } %>
 
-        <%= f.input :year %>
+        <%= f.input :year, :input_html => { :class => 'filler' } %>
 
-        <%= f.input :description %>
+        <%= f.input :description, :input_html => { :class => 'filler' } %>
 
-        <%= f.input :condition, collection: ['new', 'used', 'damaged', 'highly damaged']  %>
+        <%= f.input :condition, collection: ['new', 'used', 'damaged', 'highly damaged'], :input_html => { :class => 'filler' }  %>
 
-        <%= f.input :price %>
+        <%= f.input :price, :input_html => { :class => 'filler' } %>
 
-        <%= f.input :photo, as: :file%>
+        <%= f.input :photo, as: :file, :input_html => { :class => 'filler' }%>
         <br>
         <%= f.submit "Save changes", class: "btn btn-success mb-5"  %>
       <% end %>
