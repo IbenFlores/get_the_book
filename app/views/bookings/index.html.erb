@@ -1,18 +1,31 @@
 <div class="mb-5">
   <h1 id="index-title" class="text-center">BOOKINGS</h1>
 </div>
-<div class="container-lg">
-    <ul style="list-style-type: none">
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-lg-3">
+      <div>
+        <p><%= @current_user.username.capitalize %></p>
+        <p>Books lent</p>
+        <p>My rentals</p>
+        <p>My bookings</p>
+      </div>
+    </div>
+    <div class="col-sm-9 col-lg-9">
       <% @bookings.each do |booking| %>
-      <div class="card-body bg-white mb-5">
-        <li class="card-title"><strong>Book: <%= booking.book.title %></strong></li>
-        <li class="card-subtitle">Lent by: <%= booking.book.owner.username %> </li>
-        <li class="card-text">Rented by: <%= current_user.username.capitalize %> </li>
-        <br>
-        <li class="card-title"><strong>Start date: <%= booking.start_date %></strong></li>
-        <li class="card-title"><strong>End date: <%= booking.end_date %></strong></li>
+        <div class="card-profile-box p-5 parent mb-5">
+          <div class="pl-5 pt-3 justify-content-right">
+          <p id="bookings-card-title"><%= booking.book.title %></p>
+          <p>Lent by <%= booking.book.owner.username %> & Rented by <%= current_user.username.capitalize %></p>
+          <br>
+          <p><strong>Price $<%= booking.book.price %></strong></p>
+          <p><strong>From <%= booking.start_date.to_s.split.first %> to <%= booking.end_date.to_s.split.first %></strong></p>
+          </div>
+          <%= image_tag "pile.png", class: "child-bookings-book-img" %>
         </div>
       <% end %>
-    </ul>
+    </div>
   </div>
 </div>
+
