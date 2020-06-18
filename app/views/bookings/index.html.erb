@@ -1,10 +1,21 @@
 <div class="mb-5">
   <h1 id="index-title" class="text-center">BOOKINGS</h1>
 </div>
-<div class="container-lg">
-    <ul style="list-style-type: none">
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-lg-9">
+      <div>
+        <h2><%= @current_user.username.capitalize %></h2>
+        <p>Books lent</p>
+        <p>My rentals</p>
+        <p>My bookings</p>
+      </div>
+    </div>
+    <div class="col-sm-9 col-lg-9">
+      <ul style="list-style-type: none">
       <% @bookings.each do |booking| %>
-      <div class="card-body bg-white mb-5">
+        <div class="card-body bg-white mb-5">
         <li class="card-title"><strong>Book: <%= booking.book.title %></strong></li>
         <li class="card-subtitle">Lent by: <%= booking.book.owner.username %> </li>
         <li class="card-text">Rented by: <%= current_user.username.capitalize %> </li>
@@ -13,6 +24,10 @@
         <li class="card-title"><strong>End date: <%= booking.end_date %></strong></li>
         </div>
       <% end %>
-    </ul>
+      </ul>
+    </div>
   </div>
+
+
 </div>
+
