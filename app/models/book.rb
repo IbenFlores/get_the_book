@@ -10,4 +10,8 @@ class Book < ApplicationRecord
   def owner
     User.find(owner_id)
   end
+
+  def booked?
+    self.bookings.any?
+  end
 end

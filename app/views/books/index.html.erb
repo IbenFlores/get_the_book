@@ -8,7 +8,11 @@
       <% @books.each do |book| %>
         <div class="parent card-product col-4">
           <% if current_user != book.owner %>
-            <p class="child text-center badge badge-info text-wrap" style="width: 4rem;">Book available for rental</p>
+            <% if book.booked? %>
+              <p>Currently booked</p>
+            <% else %>
+              <p class="child text-center badge badge-info text-wrap" style="width: 4rem;">Book available for rental</p>
+            <% end %>
           <% else %>
             <p>This book belongs to you</p>
           <% end %>
