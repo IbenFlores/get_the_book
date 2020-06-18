@@ -1,18 +1,18 @@
 .btn-flat {
-  color: white;
+  color: $dim-gray;
   padding: 8px 24px;
   border-radius: 4px;
-  background: $pink;
+  background: $magic-mint;
   transition: background 0.3s ease;
   border: none;
   a {
     text-decoration: none;
-    color: $white;
+    color: $dim-gray;
   }
 }
 
 .btn-flat:hover {
-  background: $light-pink;
+  background: $aero-blue;
   color: white;
 }
 

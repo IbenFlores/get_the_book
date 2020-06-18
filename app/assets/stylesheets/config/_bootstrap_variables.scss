@@ -6,13 +6,13 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $light-pink;
+$body-bg:                 $white;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: gray;
-$primary:    #9bdeac;
-$success:    $light-pink;
+$body-color: $dim-gray;
+$primary:    $dodger-blue;
+$success:    $magic-mint;
 $info:       $pink;
 $danger:     red;
 $warning:    orange;
