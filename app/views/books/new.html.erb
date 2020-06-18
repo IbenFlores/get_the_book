@@ -1,18 +1,28 @@
-<div class="container">
-  <div class="row justify-content-center mb-3 ">
-    <div class="col-12 col-lg-8">
-        <p class="font-weight-bold p-4">Lend a book</p>
-        <%= simple_form_for(@book) do |f| %>
-          <%= f.input :title %>
-          <%= f.input :year %>
-          <%= f.input :author %>
-          <%= f.input :description, as: :text %>
-          <%= f.input :price %>
-          <%= f.input :condition, collection: ['new', 'used', 'damaged', 'highly damaged'] %>
-          <%= f.input :photo, as: :file %>
-          <%= f.button :submit, "Ready", class: "btn-flat mb-5" %>
-        <% end %>
+<div class="container form">
+  <h4 style="font-family: Nunito" class="form-title">Upload Book</h4>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6 col-md-offset-3">
+      <%= simple_form_for (@book) do |f| %>
+        <%= f.input :title %>
+
+        <%= f.input :author %>
+
+        <%= f.input :year %>
+
+        <%= f.input :description %>
+
+        <%= f.input :condition, collection: ['new', 'used', 'damaged', 'highly damaged']  %>
+
+        <%= f.input :price %>
+
+        <%= f.input :photo, as: :file%>
+        <br>
+
+        <div class="form-actions mb-5 btn-success" style="width: 200px; border-radius: 5px">
+          <%= f.button :submit, "Submit new book" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
-
