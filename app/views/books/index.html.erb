@@ -1,30 +1,35 @@
-<div class="mb-5">
-  <h1 id="index-title" class="text-center">BOOKS</h1>
-</div>
 <div class="container">
-  <button class="btn btn-success m-5"><%= link_to "Lend a new book", new_book_path%></button>
-  <div class="d-flex">
-    <div class="col-12 col-lg-12">
-      <% @books.each do |book| %>
-        <div class="parent card-product col-4">
+  <div class="row">
+    <div class="col col-lg-1">
+      <h1>BOOKS</h1>
+      <button class="btn btn-success"><%= link_to "Lend a new book", new_book_path%></button>
+    </div>
+    <div>
+
+    </div>
+  </div>
+  <div class="row row-cols-3">
+  <% @books.each do |book| %>
+    <div class="col-sm-6 col-lg-3">
+      <div class="parent card-product">
+         <img src="#" alt="#">
           <% if current_user != book.owner %>
             <% if book.booked? %>
-              <p>Currently booked</p>
+              <p class="child-booked text-center badge badge-info text-wrap" style="width: 5rem;">Currently booked</p>
             <% else %>
-              <p class="child text-center badge badge-info text-wrap" style="width: 4rem;">Book available for rental</p>
+              <p class="child-rental-available text-center badge badge-success text-wrap" style="width: 4rem;">Book available for rental</p>
+              <i class="fas fa-book-open child-book-icon"></i>
             <% end %>
           <% else %>
             <p>This book belongs to you</p>
           <% end %>
           <div class="card-product-infos">
             <h2><%= link_to book.title, book_path(book) %></h2>
-            <p>Publishing year: <%= book.year %></p>
-            <p>Author: <%= book.author %></p>
+            <p><%= "#{book.author} | #{book.year}" %></p>
             <p>Price: <%= book.price %>$</p>
-            <i class="fas fa-book-open text-right"></i>
           </div>
-        </div>
-      <% end %>
+      </div>
     </div>
+  <% end %>
   </div>
 </div>
