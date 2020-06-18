@@ -6,7 +6,12 @@
   <div class="row">
     <div class="col-sm-3 col-lg-3">
       <div>
-        <p><%= @current_user.username.capitalize %></p>
+        <%  if current_user.avatar.attached? %>
+          <%= cl_image_tag current_user.avatar.key, class: "profile-pic-bookings" %>
+        <% else %>
+          <%= image_tag "logo.png", class: "profile-pic-bookings" %>
+        <% end %>
+        <p><%= @current_user.username.capitalize %>'s bookings</p>
         <p>Books lent</p>
         <p>My rentals</p>
         <p>My bookings</p>
