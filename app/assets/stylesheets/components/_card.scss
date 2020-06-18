@@ -75,3 +75,27 @@ a {
   right: 16px;
   top: 269px;
 }
+
+.child-bookings-book-img {
+  background-color: $black;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  right: 440px;
+  top: 35px;
+}
+
+.card-profile-box {
+  background-color: $aero-blue;
+  height: 350px;
+  width: 550px;
+  p {
+    font-size: 12px;
+    padding-left: 80px;
+  }
+}
+
+#bookings-card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
