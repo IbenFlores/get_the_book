@@ -1,24 +1,25 @@
-<div class="container">
-  <h2>Update</h2>
-
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+<hr>
+<div class="container form">
+  <h4 style="font-family: Nunito" class="form-title">Update Book</h4>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6 col-md-offset-3">
       <%= simple_form_for (@book) do |f| %>
-        <%= f.input :title, class: 'form-control' %>
+        <%= f.input :title %>
 
-        <%= f.input :author, class: 'form-control' %>
+        <%= f.input :author %>
 
-        <%= f.input :year, class: 'form-control' %>
+        <%= f.input :year %>
 
-        <%= f.input :description, class: 'form-control' %>
+        <%= f.input :description %>
 
-        <%= f.input :condition, class: 'form-control' %>
+        <%= f.input :condition, collection: ['new', 'used', 'damaged', 'highly damaged']  %>
 
-        <%= f.input :price, class: 'form-control' %>
+        <%= f.input :price %>
 
-        <%= f.input :photo, as: :file, class: 'form-control'%>
-
-        <%= f.submit "Save changes", class: "btn btn-primary"  %>
+        <%= f.input :photo, as: :file%>
+        <br>
+        <%= f.submit "Save changes", class: "btn btn-primary mb-5"  %>
       <% end %>
     </div>
   </div>

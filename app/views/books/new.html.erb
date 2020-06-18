@@ -8,9 +8,9 @@
           <%= f.input :author %>
           <%= f.input :description, as: :text %>
           <%= f.input :price %>
-          <%= f.input :condition %>
+          <%= f.input :condition, collection: ['new', 'used', 'damaged', 'highly damaged'] %>
           <%= f.input :photo, as: :file %>
-          <%= f.button :submit, "Ready", class: "btn-flat" %>
+          <%= f.button :submit, "Ready", class: "btn-flat mb-5" %>
         <% end %>
     </div>
   </div>
