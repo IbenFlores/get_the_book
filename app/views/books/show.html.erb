@@ -1,5 +1,6 @@
 <div class="container">
   <h1 id="title-table"><%= @book.title %></h1>
+  <br>
   <h6>
     <% if policy(@book).edit? %>
       <%= link_to "Update", edit_book_path(@book) %>
@@ -12,7 +13,27 @@
       <% end %>
     <% end %>
   </h6>
-  <div class="row" id="table-contents">
+  <div id="inner-card">
+    <div id="container-contents">
+      <h4>Owner</h4>
+      <%= @book.owner.username %>
+      <h5>Description</h5>
+      <%= @book.description %>
+      <h5>Year</h5>
+      <%= @book.year %>
+      <h5>Condition</h5>
+      <%= @book.condition %>
+      <h5>Author</h5>
+      <%= @book.author %>
+      <h5>Price</h5>
+      <%= @book.price %>
+    </div>
+    <div id="container-image">
+      <%= cl_image_tag current_user.avatar.key %>
+    </div>
+  </div>
+  <br>
+  <!-- <div class="row" id="table-contents">
     <div class="col-sm-12 col-md-6 col-lg-12">
       <table class="table table-bordered table table-borderless table-light">
         <tbody>
@@ -49,7 +70,7 @@
         </tbody>
       </table>
     </div>
-  </div>
+  </div> -->
 </div>
   <div id="button_from_show">
     <button class="btn-flat btn-flat:hover">

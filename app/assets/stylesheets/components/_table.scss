@@ -7,3 +7,51 @@ margin: 0 auto;
 #title-table {
 text-align: center;
 }
+
+#book-owner {
+  padding: 15px;
+  background-color: white;
+  border: 3px;
+  border-color: black;
+}
+
+#inner-card {
+  background-color: white;
+  text-align: justify;
+  border: 4px solid;
+  border-color: black;
+  width: 80%;
+  display: flex;
+  position: relative;
+  left: 10%;
+  box-sizing: border-box;
+}
+
+#container-contents {
+  padding: 50px;
+  width: 60%;
+  text-align: left;
+  height: 550px;
+  border: border-box;
+}
+
+#container-contents h5 {
+  font-size: 19px;
+  font-family: Nunito;
+  font-weight: bolder;
+}
+
+#container-contents h4 {
+  font-size: 22px;
+  font-family: Nunito;
+  font-weight: bold;
+}
+
+
+#container-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  width: 300px;
+  height: 550px;
+}
