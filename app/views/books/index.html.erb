@@ -1,18 +1,16 @@
 <div class="container">
-  <div class="row">
-    <div class="col col-lg-1">
-      <h1>BOOKS</h1>
-      <button class="btn btn-success"><%= link_to "Lend a new book", new_book_path%></button>
-    </div>
-    <div>
-
-    </div>
+  <div>
+    <h1>BOOKS</h1>
   </div>
+  <div class="justify-content-right">
+    <button class="btn btn-success"><i class="fas fa-bookmark"></i><%= link_to "Lend a new book", new_book_path%></button>
+  </div>
+
   <div class="row row-cols-3">
   <% @books.each do |book| %>
     <div class="col-sm-6 col-lg-3">
       <div class="parent card-product">
-         <img src="#" alt="#">
+         <%= cl_image_tag book.photo.key%>
           <% if current_user != book.owner %>
             <% if book.booked? %>
               <p class="child-booked text-center badge badge-info text-wrap" style="width: 5rem;">Currently booked</p>
