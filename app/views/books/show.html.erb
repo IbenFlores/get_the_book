@@ -29,7 +29,11 @@
       <%= @book.price %>
     </div>
     <div id="container-image">
-      <%= cl_image_tag current_user.avatar.key %>
+      <% if @book.photo.attached? %>
+        <%= cl_image_tag @book.photo.key %>
+      <% else %>
+        <%= image_tag "pile.png" %>
+      <% end %>
     </div>
   </div>
   <br>
