@@ -8,8 +8,8 @@
   </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div>
+  <div class="collapse navbar-collapse form-inline" id="navbarSupportedContent">
+    <div id="search-bar">
       <%= form_tag books_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
