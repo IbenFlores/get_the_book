@@ -13,17 +13,16 @@
          <% if book.photo.attached? %>
           <%= cl_image_tag book.photo.key %>
          <% else %>
-          <%= image_tag "pile.png" %>
+          <%= image_tag "books.png" %>
          <% end %>
           <% if current_user != book.owner %>
             <% if book.booked? %>
               <p class="child-booked text-center badge badge-info text-wrap" style="width: 5rem;">Currently booked</p>
             <% else %>
-              <p class="child-rental-available text-center badge badge-success text-wrap" style="width: 4rem;">Book available for rental</p>
-              <i class="fas fa-book-open child-book-icon"></i>
+              <p class="child-rental-available text-center badge badge-success text-wrap" style="width: 4rem;">Available for rental</p>
             <% end %>
           <% else %>
-            <p>This book belongs to you</p>
+            <p class="child-rental-available text-center badge badge-primary text-wrap" style="width: 4rem;">Your book</p>
           <% end %>
           <div class="card-product-infos">
             <h2><%= link_to book.title, book_path(book) %></h2>
