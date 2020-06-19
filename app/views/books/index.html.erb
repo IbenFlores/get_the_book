@@ -15,7 +15,7 @@
          <% if book.photo.attached? %>
           <%= cl_image_tag book.photo.key %>
          <% else %>
-          <%= image_tag "books.png" %>
+          <%= image_tag book.photo_url %>
          <% end %>
           <% if current_user != book.owner %>
             <% if book.booked? %>
