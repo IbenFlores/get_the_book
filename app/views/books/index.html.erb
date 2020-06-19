@@ -17,6 +17,8 @@
          <% else %>
             <% if book.photo_url %>
               <%= image_tag book.photo_url %>
+            <% else %>
+              <%= image_tag "pile.png" %>
             <% end %>
          <% end %>
           <% if current_user != book.owner %>
