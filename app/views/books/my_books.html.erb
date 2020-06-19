@@ -15,20 +15,18 @@
         </div>
         <br>
         <p class="pb-3"><strong><%= @current_user.username.capitalize %>'s profile</strong></p>
-        <p><%= link_to my_books_books_path(@book) %></p>
+        <p>Books lent</p>
         <p>My bookings</p>
       </div>
     </div>
     <div class="col-sm-9 col-lg-9">
-      <% @bookings.each do |booking| %>
+      <% @books.each do |book| %>
         <div class="card-profile-box p-5 parent mb-5 ml-5">
           <div class="pl-5 pt-3 justify-content-right">
-          <p class="mb-0">Booking for</p>
-          <p id="bookings-card-title"><%= booking.book.title %></p>
-          <p>Lent by <%= booking.book.owner.username %> & Rented by <%= current_user.username.capitalize %></p>
+          <p class="mb-0">My book</p>
+          <p id="bookings-card-title"><%= book.title %></p>
           <br>
           <p><strong>Price $<%= booking.book.price %></strong></p>
-          <p><strong>From <%= booking.start_date.to_s.split.first %> to <%= booking.end_date.to_s.split.first %></strong></p>
           </div>
           <%= image_tag "books.png", class: "child-bookings-book-img" %>
         </div>

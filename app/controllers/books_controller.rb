@@ -12,6 +12,10 @@ class BooksController < ApplicationController
     end
   end
 
+  def my_books
+    @books = current_user.books
+  end
+
   def show
   end
 
