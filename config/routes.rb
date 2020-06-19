@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about', as: :about
   resources :users, except: [:index, :show]
   resources :books do
-    collection do
-      get "my_books"
-    end
     resources :bookings, only: [:new, :create, :edit, :update]
   end
   resources :bookings, only: [:destroy, :index]
