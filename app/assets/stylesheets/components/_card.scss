@@ -83,12 +83,13 @@ a {
 }
 
 .child-bookings-book-img {
-  background-color: $black;
+  background-color: white;
   height: 200px;
-  width: 200px;
+  width: 180px;
   position: absolute;
   right: 440px;
   top: 35px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-profile-box {
