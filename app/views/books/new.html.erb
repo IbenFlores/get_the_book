@@ -1,8 +1,8 @@
-<div class="container form">
+<div class="container form p-3 mb-3" style="width: 50%; height: 100%; background-color: #ececec; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.2);">
   <h4 style="font-family: Nunito" class="form-title">Upload Book</h4>
   <br>
   <div class="row justify-content-center">
-    <div class="col-lg-6 col-md-6 col-md-offset-3">
+    <div class="col-lg-12 col-md-6 col-md-offset-3">
       <%= simple_form_for (@book) do |f| %>
         <%= f.input :title, :input_html => { :class => 'filler' } %>
 
