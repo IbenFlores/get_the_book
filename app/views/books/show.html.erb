@@ -23,24 +23,24 @@
         <%= image_tag "pile.png" %>
       <% end %>
       <div class="d-flex justify-content-around" id="div-icons">
-        <div id="single-icon">
-          <h3 id="icon-show-page">
-              <% if policy(@book).edit? %>
-                <%= link_to edit_book_path(@book) do %>
-                    <i class="fas fa-pen-alt"></i>
-                    <% end %>
+        <% if policy(@book).edit? %>
+          <div id="single-icon">
+            <h3 id="icon-show-page">
+              <%= link_to edit_book_path(@book) do %>
+                <i class="fas fa-pen-alt"></i>
               <% end %>
-          </h3>
-        </div>
-        <div id="single-icon2">
-          <h3 id="icon-show-page-2">
-            <% if policy(@book).destroy? %>
+            </h3>
+          </div>
+        <% end %>
+        <% if policy(@book).destroy? %>
+          <div id="single-icon2">
+            <h3 id="icon-show-page-2">
               <%= link_to book_path(@book), method: :delete, data: { confirm: "Are you sure?" } do %>
                   <i class="fas fa-trash-alt"></i>
               <% end %>
-            <% end %>
-          </h3>
-        </div>
+            </h3>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
