@@ -16,15 +16,15 @@ text-align: center;
 }
 
 #inner-card {
-  background-color: white;
+  background-color: #ececec;
   text-align: justify;
-  border: 4px solid;
-  border-color: black;
+  border-color: $dim-gray;
   width: 80%;
   display: flex;
   position: relative;
   left: 10%;
   box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 #container-contents {
@@ -55,3 +55,32 @@ text-align: center;
   width: 300px;
   height: 550px;
 }
+
+#div-icons {
+  display: flex;
+  position: relative;
+  left: -140%;
+  bottom: 15%;
+}
+
+#single-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background-color: $baby-pink;
+  width: 80px;
+  padding: 20px;
+}
+
+#single-icon2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  width: 80px;
+  background-color: $baby-pink;
+  padding: 20px;
+}
+
+

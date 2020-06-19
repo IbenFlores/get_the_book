@@ -1,18 +1,6 @@
 <div class="container">
   <h1 id="title-table"><%= @book.title %></h1>
   <br>
-  <h6>
-    <% if policy(@book).edit? %>
-      <%= link_to "Update", edit_book_path(@book) %>
-    <% end %>
-  </h6>
-  <h6>
-    <% if policy(@book).destroy? %>
-      <%= link_to book_path(@book), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="fa fa-trash destroy_book"></i>
-      <% end %>
-    <% end %>
-  </h6>
   <div id="inner-card">
     <div id="container-contents">
       <h4>Owner</h4>
@@ -34,6 +22,26 @@
       <% else %>
         <%= image_tag "pile.png" %>
       <% end %>
+      <div class="d-flex justify-content-around" id="div-icons">
+        <div id="single-icon">
+          <h3 id="icon-show-page">
+              <% if policy(@book).edit? %>
+                <%= link_to edit_book_path(@book) do %>
+                    <i class="fas fa-pen-alt"></i>
+                    <% end %>
+              <% end %>
+          </h3>
+        </div>
+        <div id="single-icon2">
+          <h3 id="icon-show-page-2">
+            <% if policy(@book).destroy? %>
+              <%= link_to book_path(@book), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fas fa-trash-alt"></i>
+              <% end %>
+            <% end %>
+          </h3>
+        </div>
+      </div>
     </div>
   </div>
   <br>
@@ -51,18 +59,3 @@
       <p>this book belongs to you</p>
     <% end %>
   </div>
-  <br>
-<div class="badge badge-success text-wrap" style="width: 4rem;">
-   <h6 class="text-center">
-    <% if policy(@book).edit? %>
-      <%= link_to "Update", edit_book_path(@book) %>
-    <% end %>
-  </h6>
-</div>
-<h6>
-  <% if policy(@book).destroy? %>
-    <%= link_to book_path(@book), method: :delete, data: { confirm: "Are you sure?" } do %>
-        <i class="fa fa-trash destroy_book"></i>
-    <% end %>
-  <% end %>
-</h6>
