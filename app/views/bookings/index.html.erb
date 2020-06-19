@@ -5,12 +5,15 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-3 col-lg-3">
-      <div>
-        <%  if current_user.avatar.attached? %>
-          <%= cl_image_tag current_user.avatar.key, class: "profile-pic-bookings" %>
-        <% else %>
-          <%= image_tag "logo.png", class: "profile-pic-bookings" %>
-        <% end %>
+      <div class="justify-content-center">
+        <div>
+          <%  if current_user.avatar.attached? %>
+            <%= cl_image_tag current_user.avatar.key, class: "profile-pic-bookings" %>
+          <% else %>
+            <%= image_tag "logo.png", class: "profile-pic-bookings" %>
+          <% end %>
+        </div>
+        <br>
         <p><%= @current_user.username.capitalize %>'s bookings</p>
         <p>Books lent</p>
         <p>My rentals</p>
@@ -27,7 +30,7 @@
           <p><strong>Price $<%= booking.book.price %></strong></p>
           <p><strong>From <%= booking.start_date.to_s.split.first %> to <%= booking.end_date.to_s.split.first %></strong></p>
           </div>
-          <%= image_tag "pile.png", class: "child-bookings-book-img" %>
+          <%= image_tag "books.png", class: "child-bookings-book-img" %>
         </div>
       <% end %>
     </div>

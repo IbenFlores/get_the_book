@@ -15,6 +15,9 @@
 .btn-flat:hover {
   background: $aero-blue;
   color: white;
+  i {
+    color: $dim-gray;
+  }
 }
 
 #button_from_show {

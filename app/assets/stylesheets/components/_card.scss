@@ -11,6 +11,12 @@
   width: 200px;
 }
 
+.card-product:hover {
+    transform: scale(1.10);
+    transition: 500ms;
+  }
+
+
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
@@ -77,12 +83,13 @@ a {
 }
 
 .child-bookings-book-img {
-  background-color: $black;
+  background-color: white;
   height: 200px;
-  width: 200px;
+  width: 180px;
   position: absolute;
   right: 440px;
   top: 35px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-profile-box {
